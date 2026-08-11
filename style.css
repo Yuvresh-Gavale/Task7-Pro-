@@ -1,0 +1,371 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 10vh;
+    background-color: #eaeaea;
+
+    /* Pure Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 4vw;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #2c3947;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1rem;
+
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #0088ff;
+}
+
+
+/* NAVBAR BUTTON */
+
+.btn {
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #d6ecff;
+    color: #399cbd;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c5e4fa;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    width: 100%;
+    min-height: 90vh;
+
+    /* Pure Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5vw;
+
+    transition: all 0.3s ease;
+}
+
+
+/* TEXT SECTION */
+
+.text-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* HEADINGS */
+
+.hh1,
+.hh2 {
+    color: #536878;
+    font-size: 3vw;
+}
+
+.hh3 {
+    color: #0088ff;
+    font-size: 3vw;
+}
+
+
+/* PARAGRAPH */
+
+.text-section p {
+    width: 35vw;
+
+    margin-top: 3vh;
+
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+
+/* HERO BUTTON */
+
+.btn2 {
+    width: 18vw;
+    height: 6vh;
+
+    margin-top: 4vh;
+
+    background-color: #0088ff;
+    color: white;
+
+    border: none;
+    border-radius: 0.5vw;
+
+    cursor: pointer;
+    font-size: 1rem;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn2:hover {
+    background-color: #006fd1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.image-section {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 80%;
+    max-width: 500px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================
+   TABLET
+   768px AND BELOW
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 40px 20px;
+    }
+
+    .text-section,
+    .image-section {
+        width: 100%;
+        align-items: center;
+    }
+
+
+    /* HEADINGS */
+
+    .hh1,
+    .hh2,
+    .hh3 {
+        font-size: 2.5rem;
+    }
+
+
+    /* PARAGRAPH */
+
+    .text-section p {
+        width: 100%;
+        max-width: 600px;
+
+        margin: 20px auto;
+    }
+
+
+    /* BUTTON */
+
+    .btn2 {
+        width: 250px;
+    }
+
+
+    /* IMAGE */
+
+    .image-section img {
+        width: 60%;
+        margin-top: 30px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   480px AND BELOW
+========================= */
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        padding: 8px 12px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .text-section {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    /* HEADINGS */
+
+    .hh1,
+    .hh2,
+    .hh3 {
+        font-size: 2rem;
+    }
+
+
+    /* PARAGRAPH */
+
+    .text-section p {
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* BUTTON */
+
+    .btn2 {
+        width: 100%;
+        max-width: 300px;
+    }
+
+
+    /* IMAGE */
+
+    .image-section {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .image-section img {
+        width: 80%;
+    }
+}
+
